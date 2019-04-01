@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User Create Data Response",
+  "required": [
+    "name",
+    "job"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    }
+  }
+}

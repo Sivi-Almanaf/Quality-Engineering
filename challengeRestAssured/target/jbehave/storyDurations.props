@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Tue Mar 26 01:20:03 WIB 2019
+stories/Pet/Pet.story=6000
+threads=1
+total=6000
+threadAverage=6000

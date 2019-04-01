@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login","User supplies correct user name and password","ERROR","2019-03-22T18:23:58.308221+07:00[Asia/Jakarta]","0.0","4.0"
+"Login","User does NOT supply correct user name and password","ERROR","2019-03-22T18:24:02.732608+07:00[Asia/Jakarta]","0.0","0.04"
+"Average","The average of two numbers","SUCCESS","2019-03-22T18:24:07.043234+07:00[Asia/Jakarta]","0.0","0.03"
+"Average","The average of two numbers that gives decimal output","SUCCESS","2019-03-22T18:24:07.076079+07:00[Asia/Jakarta]","0.0","0.05"

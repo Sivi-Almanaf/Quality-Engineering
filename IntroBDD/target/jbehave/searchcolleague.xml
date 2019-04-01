@@ -1,0 +1,64 @@
+<story path="searchcolleague.story" title="">
+<meta>
+<property keyword="@" name="Register" value="Functionality"/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">create account</asA>
+  <iWantTo keyword="So that">I have account in Linkedin</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Input valid firstname and last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input valid firstname and lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid firstname">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input just valid firstname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid lastname">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input just valid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid firstname and invalid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input valid firstname and invalid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input Invalid firstname and valid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input Invalid firstname and valid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input Invalid firstname and Invalid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input Invalid firstname and Invalid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Click Alphabet &apos;A-Z&apos; for linkedin member directory">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Im click one of Alphabet on list Linkedin member directory</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page linkedin for member directory</step>
+</scenario>
+<scenario keyword="Scenario:" title="button &apos;more&apos; functioanlity">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Im click more on Linkedin member directory</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page linkedin for member directory &apos;more&apos;</step>
+</scenario>
+<scenario keyword="Scenario:" title="button &apos;browse members by country/region&apos; functionality">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Im click browse on Linkedin member directory</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page linkedin for browse member by country/region</step>
+</scenario>
+</story>

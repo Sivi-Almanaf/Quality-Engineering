@@ -1,0 +1,49 @@
+<div class="story">
+<h1></h1>
+<div class="path">stories/OpenProfile.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> perform profile page</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can see my profile</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Scenario Open Profile Success</h2>
+<div class="givenStories">GivenStories:
+<div class="givenStory">stories/login.story#{Login:Success} {}</div>
+</div>
+<div class="story">
+<h1></h1>
+<div class="path">stories/login.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@Login </div>
+</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> perform login on linkedin</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can see my news feed</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Scenario login success</h2>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@Login Success</div>
+</div>
+<div class="step successful">Given I open linkedin login page</div>
+<div class="step successful">When I input email and password <span class="step parameter">v_manaf@yahoo.co.id</span> dan <span class="step parameter">FSAI11890cv4048</span></div>
+<div class="step successful">When I click button sign in</div>
+<div class="step pending">Then I got to my news feed
+
+Meta: @Login Failed <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Then(&quot;I got to my news feed\n\nMeta: @Login Failed&quot;)
+@Pending
+public void thenIGotToMyNewsFeedMetaLoginFailed() {
+  // PENDING
+}
+</pre></div>
+</div>
+</div>
+<div class="step notPerformed">When I click button notification <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then I got to my list notification <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+</div>
+</div>

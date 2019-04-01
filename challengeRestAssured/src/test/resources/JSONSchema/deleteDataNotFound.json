@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Delete Data Not Found",
+  "required": [
+    "error"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "error": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+Test/OpenProfile.class
+Pages/LinkedinLogin.class
+Pages/LinkedinFeed.class
+Test/Login.class
+Pages/LinkedinFindColleague.class
+Pages/LinkedinOpenProfile.class
+Pages/LinkedinOpenProfileFeed.class
+Steps/FindColleagueSteps.class
+Steps/OpenProfileSteps.class
+Pages/LinkedinFindColleagueFeed.class
+Test/FindColleague.class
+Steps/LoginSteps.class

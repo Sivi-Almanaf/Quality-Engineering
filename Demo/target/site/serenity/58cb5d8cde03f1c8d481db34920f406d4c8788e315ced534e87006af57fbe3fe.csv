@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Average","The average of two numbers","SUCCESS","2019-03-22T18:24:07.043234+07:00[Asia/Jakarta]","0.0","0.03"
+"Average","The average of two numbers that gives decimal output","SUCCESS","2019-03-22T18:24:07.076079+07:00[Asia/Jakarta]","0.0","0.05"

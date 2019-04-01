@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: test.login.Login
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 2, Skipped: 4, Time elapsed: 12.975 s <<< FAILURE! - in test.login.Login
+When I enter my email and password correctly(test.login.Login)  Time elapsed: 3.527 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException
+	at test.login.Login.whenIEnterMyUserNameAndPasswordCorrectly(Login.java:20)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Could not find sun.misc.Unsafe
+	at test.login.Login.whenIEnterMyUserNameAndPasswordCorrectly(Login.java:20)
+
+When I enter my email only(test.login.Login)  Time elapsed: 0.026 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class net.serenitybdd.rest.utils.RestSpecificationFactory
+	at test.login.Login.whenIEnterMyUserNameAndPasswordIncorrectly(Login.java:32)
+

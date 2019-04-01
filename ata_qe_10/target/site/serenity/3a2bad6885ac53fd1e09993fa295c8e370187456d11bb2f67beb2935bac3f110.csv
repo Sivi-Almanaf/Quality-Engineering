@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Create update","User supplies correct data for Post data","ERROR","2019-03-24T15:27:48.413+07:00[Asia/Jakarta]","0.0","8.72"
+"Create update","User supplies correct data for Put data","ERROR","2019-03-24T15:27:57.624+07:00[Asia/Jakarta]","0.0","0.12"
+"Create update","User supplies correct data for Patch data","ERROR","2019-03-24T15:27:57.759+07:00[Asia/Jakarta]","0.0","0.09"

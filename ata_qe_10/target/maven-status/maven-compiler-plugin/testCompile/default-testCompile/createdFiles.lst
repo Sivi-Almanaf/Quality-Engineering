@@ -1,0 +1,8 @@
+test/PostPut/CreateUpdate.class
+test/Get/GetSteps.class
+test/Register/RegisterSteps.class
+test/Register/Register.class
+test/Login/LoginSteps.class
+test/Get/GetUsers.class
+test/PostPut/CreateUpdateSteps.class
+test/Login/Login.class

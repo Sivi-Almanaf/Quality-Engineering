@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>stories.CreateUpdate.CreateUpdate</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">stories/CreateUpdate/CreateUpdate.story</div>
+<div class="scenario">
+<h2>Scenario: User supplies correct data for Post data</h2>
+<div class="step successful">Given that I am on page admin</div>
+<div class="step failed">When I enter name, and jobs correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.RuntimeException: Some exception during recording fields</span></div>
+<div class="step notPerformed">And click 'Send' <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then I have update database with post and new id <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">java.lang.RuntimeException: Some exception during recording fields
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:52)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	(groovy-call)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	(groovy-call)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1731)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+	(groovy-call)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1737)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+	(groovy-call)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:174)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.executeCall(RequestSpecificationDecorated.java:260)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.execute(RequestSpecificationDecorated.java:220)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java:72)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java:25)
+	at test.PostPut.CreateUpdateSteps.createSuccess(CreateUpdateSteps.java:24)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551.CGLIB$createSuccess$0(&lt;generated&gt;)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551$$FastClassByCGLIB$$a6d6004c.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:376)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:147)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551.createSuccess(&lt;generated&gt;)
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectly(CreateUpdate.java:23)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: User supplies correct data for Put data</h2>
+<div class="step successful">Given that I am on page admin</div>
+<div class="step failed">When I enter name, and jobs correctly for put update <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.RuntimeException: Some exception during recording fields</span></div>
+<div class="step notPerformed">And click 'Send' <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then I have update database with put <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">java.lang.RuntimeException: Some exception during recording fields
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:52)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1731)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1737)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+	(groovy-call)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:178)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.executeCall(RequestSpecificationDecorated.java:266)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.execute(RequestSpecificationDecorated.java:220)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.put(RequestSpecificationDecorated.java:103)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.put(RequestSpecificationDecorated.java:25)
+	at test.PostPut.CreateUpdateSteps.updateSuccess(CreateUpdateSteps.java:43)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551.CGLIB$updateSuccess$2(&lt;generated&gt;)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551$$FastClassByCGLIB$$a6d6004c.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:376)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:147)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551.updateSuccess(&lt;generated&gt;)
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectlyPutUpdate(CreateUpdate.java:39)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: User supplies correct data for Patch data</h2>
+<div class="step successful">Given that I am on page admin</div>
+<div class="step failed">When I enter name, and jobs correctly for pacth update <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.RuntimeException: Some exception during recording fields</span></div>
+<div class="step notPerformed">And click 'Send' <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then I have update database with patch <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">java.lang.RuntimeException: Some exception during recording fields
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:52)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)
+	at net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1731)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1737)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:178)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.executeCall(RequestSpecificationDecorated.java:266)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.execute(RequestSpecificationDecorated.java:220)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.put(RequestSpecificationDecorated.java:103)
+	at net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.put(RequestSpecificationDecorated.java:25)
+	at test.PostPut.CreateUpdateSteps.updatePatch(CreateUpdateSteps.java:61)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551.CGLIB$updatePatch$4(&lt;generated&gt;)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551$$FastClassByCGLIB$$a6d6004c.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:376)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:147)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at test.PostPut.CreateUpdateSteps$$EnhancerByCGLIB$$d3c2b551.updatePatch(&lt;generated&gt;)
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectlyPatchUpdate(CreateUpdate.java:49)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</pre>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

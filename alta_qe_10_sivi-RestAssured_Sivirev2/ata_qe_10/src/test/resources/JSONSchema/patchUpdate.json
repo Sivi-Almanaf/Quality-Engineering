@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User Patch Data Response",
+  "required": [
+    "name",
+    "job",
+    "updatedAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    }
+
+  }
+}

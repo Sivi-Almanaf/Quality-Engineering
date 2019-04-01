@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Regression","User supplies correct data for Post data","PENDING","2019-03-24T13:51:24.939+07:00[Asia/Jakarta]","0.0","0.04"
+"Regression","User supplies correct data for Put data","PENDING","2019-03-24T13:51:24.983+07:00[Asia/Jakarta]","0.0","0.02"
+"Regression","User supplies correct data for Patch data","PENDING","2019-03-24T13:51:25.005+07:00[Asia/Jakarta]","0.0","0.03"

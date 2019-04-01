@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User Get List Response",
+  "type": "object",
+  "required": ["page", "per_page", "total", "total_pages", "data"],
+  "additionalProperties": false,
+      "properties": {
+        "page": {
+          "type": "integer"
+        },
+        "per_page": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "total_pages": {
+          "type": "integer"
+        },
+        "data": {
+          "type": "array",
+          "minItems": 0,
+          "items" : {
+            "$ref": "file:src/test/resources/JSONSchema/GetSingleUser.json#/definitions/GetSingleUser"
+        }
+      }
+    }
+  }

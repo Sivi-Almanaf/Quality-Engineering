@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User Get Single Resource",
+  "definiton": {
+    "DataGetSingleResource":
+    { "type": "object",
+      "required": [ "id", "name",
+        "year", "color", "pantone_value"
+      ], "properties":
+    { "id": {"type": "integer"},
+      "name": { "type": "string"},
+      "year": { "type": "string"},
+      "color": { "type": "string" },
+      "pantone_value": { "type": "string" }
+    }
+    }
+  }
+}

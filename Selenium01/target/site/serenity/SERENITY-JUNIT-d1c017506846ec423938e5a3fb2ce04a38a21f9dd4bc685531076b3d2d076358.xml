@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login" skipped="1" tests="3" time="70.63" timestamp="2019-03-26 10:44:03"><testcase name="Scenario login success"><skipped/></testcase><testcase name="Scenario login failed"/><testcase name="Scenario login failed"><failure message="Element should be visible" type="java.lang.AssertionError">Element should be visible</failure><system-err>Element should be visible
+Pages.LinkedinFeed.NotificationAsHuman(LinkedinFeed.java:37)
+Steps.LoginSteps.ShouldLoginFailNotification(LoginSteps.java:40)
+Test.Login.NotificationHuman(Login.java:44)
+</system-err></testcase></testsuite>

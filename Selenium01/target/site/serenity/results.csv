@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Find colleague","Scenario find colleague","SUCCESS","2019-03-26T22:43:40.128+07:00[Asia/Jakarta]","0.0","15.9"
+"Login","Scenario login success","PENDING","2019-03-26T22:44:03.001+07:00[Asia/Jakarta]","0.0","16.39"
+"Login","Scenario login failed","FAILURE","2019-03-26T22:44:27.77+07:00[Asia/Jakarta]","0.0","47.5"
+"Open profile","Scenario Open Profile Success","PENDING","2019-03-26T22:45:16.942+07:00[Asia/Jakarta]","0.0","15.47"

@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>register</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+
+(register.story)
+Meta:
+@Register Functionality
+
+Narrative:
+As a user
+I want to create account
+So that I have account in Linkedin
+Scenario: Input All valid data in form registration
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration
+And clik 'Join Now'
+Then Direct to complete profile page
+
+Scenario: Input invalid first name
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration except firstname
+And clik 'Join Now'
+Then Show message please enter a valid first name
+
+Scenario: Input invalid last name
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration except lastname
+And clik 'Join Now'
+Then Show message please enter a valid last name
+
+Scenario: Input invalid email
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration except email
+And clik 'Join Now'
+Then Show message please enter a valid email
+
+Scenario: fill form registration with empty firstname
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration and column firstname empty
+And clik 'Join Now'
+Then Show message please enter firstname
+
+Scenario: fill form registration with empty lastname
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration and column lastname empty
+And clik 'Join Now'
+Then Show message please enter lastname
+
+Scenario: fill form registration with empty email/phone number
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration and column email empty
+And clik 'Join Now'
+Then Show message please enter email address
+
+Scenario: fill form registration with empty password
+Given Im on page https://www.linkedin.com/
+When Input all valid data on form registration and column password empty
+And clik 'Join Now'
+Then Show message please enter password
+
+Scenario: Button Sign Up Functionality
+Given Im on page https://www.linkedin.com/
+When I click button Sign Up
+Then Direct to page registration new account
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>login</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="login.story" title="">
+<meta>
+<property keyword="@" name="Register" value="Functionality"/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">login</asA>
+  <iWantTo keyword="So that">I can see my profil on Linkedin</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Input All valid data on form sign in">
+<step outcome="successful">Given registered account on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input valid email registered, valid password</step>
+<step outcome="successful">And clik &apos;Sign In&apos;</step>
+<step outcome="successful">Then Direct to Homepage linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid email, wrong password">
+<step outcome="successful">Given registered account on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input valid email registered, Invalid password</step>
+<step outcome="successful">And clik &apos;Sign In&apos;</step>
+<step outcome="successful">Then Show Message please enter valid password</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input Invalid email">
+<step outcome="successful">Given registered account on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input Invalid email registered, and valid password</step>
+<step outcome="successful">And clik &apos;Sign In&apos;</step>
+<step outcome="successful">Then Show Message please enter valid email</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid email, empty password">
+<step outcome="successful">Given registered account on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input valid email registered, empty password</step>
+<step outcome="successful">And clik &apos;Sign In&apos;</step>
+<step outcome="successful">Then Show Message please enter password</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input just valid password">
+<step outcome="successful">Given registered account on page https://www.linkedin.com/</step>
+<step outcome="successful">When empty email/phone number and input valid password</step>
+<step outcome="successful">And clik &apos;Sign In&apos;</step>
+<step outcome="successful">Then Show Message please enter email/phone number</step>
+</scenario>
+<scenario keyword="Scenario:" title="forgot password functionality">
+<step outcome="successful">Given registered account on page https://www.linkedin.com/</step>
+<step outcome="successful">When Click button &apos;forgot password&apos;</step>
+<step outcome="successful">Then Direct to page request password reset</step>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

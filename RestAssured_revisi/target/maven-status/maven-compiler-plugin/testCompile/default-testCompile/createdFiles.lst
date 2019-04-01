@@ -1,0 +1,6 @@
+test/Regression/Regression.class
+test/Register/Register.class
+test/Login/LoginSteps.class
+test/Regression/RegressionSteps.class
+test/Register/RegisterSteps.class
+test/Login/Login.class

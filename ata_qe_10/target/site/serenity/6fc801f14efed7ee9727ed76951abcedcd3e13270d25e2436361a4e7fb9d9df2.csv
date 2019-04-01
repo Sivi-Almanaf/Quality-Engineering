@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register","User supplies correct data for register","ERROR","2019-03-24T15:28:04.749+07:00[Asia/Jakarta]","0.0","0.08"
+"Register","User does NOT supply correct data for register","ERROR","2019-03-24T15:28:04.839+07:00[Asia/Jakarta]","0.0","0.04"

@@ -1,0 +1,4 @@
+test/register/Register.class
+test/login/LoginSteps.class
+test/login/Login.class
+test/register/RegisterSteps.class

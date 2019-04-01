@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Pet" skipped="0" tests="4" time="6.73" timestamp="2019-03-26 01:19:56"><testcase name="User supplies correct data to add a pet"/><testcase name="User will Update an existing pet"/><testcase name="User will find pet by valid ID"/><testcase name="User Deletes a pet by valid id"/></testsuite>

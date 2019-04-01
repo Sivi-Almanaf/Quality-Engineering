@@ -1,0 +1,20 @@
+<story path="stories/Login/average.story" title="">
+<meta>
+<property keyword="@" name="Average" value="of two numbers"/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">n user doing the accounting task</inOrderTo>
+  <asA keyword="I want to">find the average of given numbers</asA>
+  <iWantTo keyword="So that">I can use the value for accounting purposes</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="The average of two numbers">
+<step outcome="successful">Given the user is calculating the average of two numbers</step>
+<step outcome="successful">When the user enters 3 and 5</step>
+<step outcome="successful">Then the result should be 4</step>
+</scenario>
+<scenario keyword="Scenario:" title="The average of two numbers that gives decimal output">
+<step outcome="successful">Given the user is calculating the average of two numbers</step>
+<step outcome="successful">When the user enters 2 and 5</step>
+<step outcome="successful">Then the result should be 3.5</step>
+</scenario>
+</story>

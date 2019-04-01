@@ -1,0 +1,112 @@
+<div class="story">
+<h1></h1>
+<div class="path">stories/User/User.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@User </div>
+</div>
+<div class="scenario">
+<h2>Scenario: User will create new user</h2>
+<div class="step successful">Given that I am ready to Admin page</div>
+<div class="step successful">When I will post for create user with valid input data</div>
+<div class="step failed">Then I'm succesful create user to petstore <span class="keyword failed">(FAILED)</span><br/><span class="message failed">io.restassured.module.jsv.JsonSchemaValidationException: com.fasterxml.jackson.core.JsonParseException: no JSON Text to read from input
+ at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]</span></div>
+<div class="comment">!-- Logs user into the system</div>
+<pre class="failure">io.restassured.module.jsv.JsonSchemaValidationException: com.fasterxml.jackson.core.JsonParseException: no JSON Text to read from input
+ at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:233)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:75)
+	at org.hamcrest.TypeSafeMatcher.matches(TypeSafeMatcher.java:65)
+	at org.hamcrest.Matcher$matches.call(Unknown Source)
+	(groovy-call)
+	at io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:76)
+	at io.restassured.assertion.BodyMatcher$validate$0.call(Unknown Source)
+	(groovy-call)
+	at io.restassured.assertion.BodyMatcherGroup$_validate_closure2.doCall(BodyMatcherGroup.groovy:47)
+	(reflection-invoke)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:430)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3202)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3172)
+	at org.codehaus.groovy.runtime.dgm$67.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:274)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+	(groovy-call)
+	at io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
+	at io.restassured.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
+	(groovy-call)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:458)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:643)
+	(reflection-invoke)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	(groovy-call)
+	at io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:94)
+	at io.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
+	(groovy-call)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:244)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:262)
+	at test.User.UserSteps.validationJSONPostCreateUser(UserSteps.java:41)
+	at test.User.UserSteps$$EnhancerByCGLIB$$a6c9f3eb.CGLIB$validationJSONPostCreateUser$1(&lt;generated&gt;)
+	at test.User.UserSteps$$EnhancerByCGLIB$$a6c9f3eb$$FastClassByCGLIB$$49e62766.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:376)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:147)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at test.User.UserSteps$$EnhancerByCGLIB$$a6c9f3eb.validationJSONPostCreateUser(&lt;generated&gt;)
+	at test.User.User.thenISuccessCreate(User.java:29)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: User will Login valid data</h2>
+<div class="step successful">Given that I am ready to Admin page</div>
+<div class="step pending">When I will login to my pet store with valid data <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then I taken to dashboard homepage <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@When(&quot;I will login to my pet store with valid data&quot;)
+@Pending
+public void whenIWillLoginToMyPetStoreWithValidData() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;I taken to dashboard homepage&quot;)
+@Pending
+public void thenITakenToDashboardHomepage() {
+  // PENDING
+}
+</pre></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Get user by valid user name</h2>
+<div class="step pending">Given that I am ready to Admin page for get <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">When I will Get user by valid user name <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then I got user by valid user name <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Given(&quot;that I am ready to Admin page for get&quot;)
+@Pending
+public void givenThatIAmReadyToAdminPageForGet() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;I will Get user by valid user name&quot;)
+@Pending
+public void whenIWillGetUserByValidUserName() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;I got user by valid user name&quot;)
+@Pending
+public void thenIGotUserByValidUserName() {
+  // PENDING
+}
+</pre></div>
+</div>
+</div>

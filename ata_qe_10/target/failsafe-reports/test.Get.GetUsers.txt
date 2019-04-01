@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: test.Get.GetUsers
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 0, Errors: 4, Skipped: 8, Time elapsed: 1.331 s <<< FAILURE! - in test.Get.GetUsers
+When I input URI and request command get for list users(test.Get.GetUsers)  Time elapsed: 0.145 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Get.GetUsers.whenIRequestCommandGetForListUsers(GetUsers.java:23)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Get.GetUsers.whenIRequestCommandGetForListUsers(GetUsers.java:23)
+
+When I input URI and request command for single user(test.Get.GetUsers)  Time elapsed: 0.043 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Get.GetUsers.whenInputURIRequestCommandSingleUser(GetUsers.java:41)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Get.GetUsers.whenInputURIRequestCommandSingleUser(GetUsers.java:41)
+
+When I input URI and request command with invalid id(test.Get.GetUsers)  Time elapsed: 0.051 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Get.GetUsers.whenInputURIRequestCommandInvalidId(GetUsers.java:53)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Get.GetUsers.whenInputURIRequestCommandInvalidId(GetUsers.java:53)
+
+When I input URI and request command for get list data response(test.Get.GetUsers)  Time elapsed: 0.217 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Get.GetUsers.whenInputURIRequestCommandGetDelayedResponse(GetUsers.java:65)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Get.GetUsers.whenInputURIRequestCommandGetDelayedResponse(GetUsers.java:65)
+

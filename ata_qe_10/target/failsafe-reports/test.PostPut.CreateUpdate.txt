@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: test.PostPut.CreateUpdate
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 3, Skipped: 6, Time elapsed: 18.228 s <<< FAILURE! - in test.PostPut.CreateUpdate
+When I enter name, and jobs correctly(test.PostPut.CreateUpdate)  Time elapsed: 7.662 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectly(CreateUpdate.java:23)
+Caused by: java.net.UnknownHostException: reqres.in: nodename nor servname provided, or not known
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectly(CreateUpdate.java:23)
+
+When I enter name, and jobs correctly for put update(test.PostPut.CreateUpdate)  Time elapsed: 0.085 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectlyPutUpdate(CreateUpdate.java:39)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectlyPutUpdate(CreateUpdate.java:39)
+
+When I enter name, and jobs correctly for pacth update(test.PostPut.CreateUpdate)  Time elapsed: 0.066 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectlyPatchUpdate(CreateUpdate.java:49)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.PostPut.CreateUpdate.whenIEnterNameJobsCorrectlyPatchUpdate(CreateUpdate.java:49)
+

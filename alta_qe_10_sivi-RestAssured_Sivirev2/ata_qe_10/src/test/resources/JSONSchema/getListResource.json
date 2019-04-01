@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User Get List Resource",
+  "definiton": {
+    "DataGetListUsersResource": {
+      "type": "object",
+      "required": [
+        "page",
+        "per_page",
+        "total",
+        "total_pages",
+        "data"
+      ],
+      "properties": {
+        "page": {
+          "type": "integer"
+        },
+        "per_page": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "total_pages": {
+          "type": "integer"
+        }, "data": {
+          "type": "array",
+          "properties": [{
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "color": {
+              "type": "string"
+            },
+            "pantone_value": {
+              "type": "string"}},
+            {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "color": {
+                "type": "string"
+              },
+              "pantone_value": {
+                "type": "string"}},
+            {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "color": {
+                "type": "string"
+              },
+              "pantone_value": {
+                "type": "string"}}
+          ]
+        }
+      }
+    }
+  }
+}

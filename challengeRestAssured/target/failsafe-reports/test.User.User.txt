@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: test.User.User
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 1, Skipped: 5, Time elapsed: 19.661 s <<< FAILURE! - in test.User.User
+Then I'm succesful create user to petstore(test.User.User)  Time elapsed: 0.813 s  <<< ERROR!
+io.restassured.module.jsv.JsonSchemaValidationException: 
+com.fasterxml.jackson.core.JsonParseException: no JSON Text to read from input
+ at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]
+	at test.User.User.thenISuccessCreate(User.java:29)
+Caused by: com.fasterxml.jackson.core.JsonParseException: 
+no JSON Text to read from input
+ at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]
+	at test.User.User.thenISuccessCreate(User.java:29)
+

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: test.Register.Register
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 2, Skipped: 4, Time elapsed: 0.568 s <<< FAILURE! - in test.Register.Register
+When I enter name, my email and password correctly(test.Register.Register)  Time elapsed: 0.054 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Register.Register.whenIEnterNameMyEmailPasswordCorrectly(Register.java:20)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Register.Register.whenIEnterNameMyEmailPasswordCorrectly(Register.java:20)
+
+When I enter name and my email only and password empty(test.Register.Register)  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Register.Register.whenIEnterNameMyEmailOnlyPasswordEmpty(Register.java:35)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Register.Register.whenIEnterNameMyEmailOnlyPasswordEmpty(Register.java:35)
+

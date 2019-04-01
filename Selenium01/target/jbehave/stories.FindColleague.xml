@@ -1,0 +1,16 @@
+<story path="stories/FindColleague.story" title="">
+<meta>
+<property keyword="@" name="FindColleague" value=""/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">find my business friend</asA>
+  <iWantTo keyword="So that">I can see their profile</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Scenario find colleague">
+<step outcome="successful">Given I open linkedin and see feature find a colleague</step>
+<step outcome="successful">When I input firstName and LastName <parameter>Juli</parameter> dan <parameter>Nur Anita</parameter></step>
+<step outcome="successful">When I click button search</step>
+<step outcome="successful">Then I got to my list suggested friend page</step>
+</scenario>
+</story>

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: test.Login.Login
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 2, Skipped: 4, Time elapsed: 0.556 s <<< FAILURE! - in test.Login.Login
+When I enter valid my email and password correctly(test.Login.Login)  Time elapsed: 0.042 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Login.Login.whenIEnterValidMyEmailAndPasswordCorrectly(Login.java:22)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Login.Login.whenIEnterValidMyEmailAndPasswordCorrectly(Login.java:22)
+
+When I enter my email only(test.Login.Login)  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+	at test.Login.Login.whenIEnterMyUserNameAndPasswordIncorrectly(Login.java:38)
+Caused by: java.net.UnknownHostException: reqres.in
+	at test.Login.Login.whenIEnterMyUserNameAndPasswordIncorrectly(Login.java:38)
+

@@ -1,0 +1,27 @@
+<story path="stories/Pet/Pet.story" title="">
+<meta>
+<property keyword="@" name="Pet" value=""/>
+</meta>
+<scenario keyword="Scenario:" title="User supplies correct data to add a pet">
+<step outcome="successful">Given that I am ready to pet page</step>
+<step outcome="successful">When I will post data with fill the data as correctly</step>
+<step outcome="successful">Then I taken to dashboard new data added</step>
+<step outcome="comment">!-- Update an existing pet</step>
+</scenario>
+<scenario keyword="Scenario:" title="User will Update an existing pet">
+<step outcome="successful">Given that I am ready to pet page</step>
+<step outcome="successful">When I will put data with fill the data as correctly</step>
+<step outcome="successful">Then I taken to dashboard and show update pet</step>
+</scenario>
+<scenario keyword="Scenario:" title="User will find pet by valid ID">
+<step outcome="successful">Given that I am ready to pet page</step>
+<step outcome="successful">When I will find pets by valid ID</step>
+<step outcome="successful">Then I taken to dashboard show status pet by valid ID</step>
+<step outcome="comment">!-- Deletes a pet</step>
+</scenario>
+<scenario keyword="Scenario:" title="User Deletes a pet by valid id">
+<step outcome="successful">Given that I am ready to pet page</step>
+<step outcome="successful">When I will delete data as correctly</step>
+<step outcome="successful">Then I taken to dashboard data deleted</step>
+</scenario>
+</story>

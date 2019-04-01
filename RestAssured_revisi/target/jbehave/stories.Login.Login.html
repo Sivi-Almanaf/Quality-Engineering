@@ -1,0 +1,22 @@
+<div class="story">
+<h1></h1>
+<div class="path">stories/Login/Login.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@Login Functionality</div>
+</div>
+<div class="scenario">
+<h2>Scenario: User supplies correct user name and password</h2>
+<div class="step successful">Given that I am on the sign-in page login</div>
+<div class="step successful">When I will login with enter valid my email and password correctly</div>
+<div class="step successful">And click 'Sign In'</div>
+<div class="step successful">Then I am taken to the dashboard after login</div>
+</div>
+<div class="scenario">
+<h2>Scenario: User does NOT supply correct user name and password</h2>
+<div class="step successful">Given that I am on the sign-in page login</div>
+<div class="step successful">When I will login with enter my email only</div>
+<div class="step successful">And click 'Sign In'</div>
+<div class="step successful">Then I see an error message 'Missing password' after Login</div>
+</div>
+</div>

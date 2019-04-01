@@ -1,0 +1,38 @@
+<story path="stories/Regression/Regression.story" title="">
+<scenario keyword="Scenario:" title="User supplies correct data for Post data">
+<step outcome="successful">Given that I am on page admin</step>
+<step outcome="pending" keyword="PENDING">When I will post enter name, and jobs correctly</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And click &apos;Send&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I have update database with post and new id</step>
+<pendingMethod>@When(&quot;I will post enter name, and jobs correctly&quot;)
+@Pending
+public void whenIWillPostEnterNameAndJobsCorrectly() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+<scenario keyword="Scenario:" title="User supplies correct data for Put data">
+<step outcome="successful">Given that I am on page admin</step>
+<step outcome="pending" keyword="PENDING">When I will put enter name, and jobs correctly for put update</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And click &apos;Send&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I have update database with put</step>
+<pendingMethod>@When(&quot;I will put enter name, and jobs correctly for put update&quot;)
+@Pending
+public void whenIWillPutEnterNameAndJobsCorrectlyForPutUpdate() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+<scenario keyword="Scenario:" title="User supplies correct data for Patch data">
+<step outcome="successful">Given that I am on page admin</step>
+<step outcome="pending" keyword="PENDING">When I will patch enter name, and jobs correctly for pacth update</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And click &apos;Send&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I have update database with patch</step>
+<pendingMethod>@When(&quot;I will patch enter name, and jobs correctly for pacth update&quot;)
+@Pending
+public void whenIWillPatchEnterNameAndJobsCorrectlyForPacthUpdate() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+</story>

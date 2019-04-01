@@ -1,0 +1,52 @@
+<story path="stories/Login.story" title="">
+<meta>
+<property keyword="@" name="Login" value=""/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">perform login on linkedin</asA>
+  <iWantTo keyword="So that">I can see my news feed</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Scenario login success">
+<meta>
+<property keyword="@" name="Login" value="Success"/>
+</meta>
+<step outcome="successful">Given I open linkedin login page</step>
+<step outcome="successful">When I input email and password <parameter>v_manaf@yahoo.co.id</parameter> dan <parameter>FSAI11890cv4048</parameter></step>
+<step outcome="successful">When I click button sign in</step>
+<step outcome="pending" keyword="PENDING">Then I got to my news feed
+
+Meta: @Login Failed</step>
+<pendingMethod>@Then(&quot;I got to my news feed\n\nMeta: @Login Failed&quot;)
+@Pending
+public void thenIGotToMyNewsFeedMetaLoginFailed() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+<scenario keyword="Scenario:" title="Scenario login failed">
+<step outcome="successful">Given I open linkedin login page</step>
+<step outcome="successful">When I input email and password <parameter>v_manaf@yahoo.co.id</parameter> dan <parameter>103214000</parameter></step>
+<step outcome="successful">When I click button sign in</step>
+<step outcome="successful">Then I got to show error message</step>
+</scenario>
+<scenario keyword="Scenario:" title="Scenario login failed">
+<step outcome="successful">Given I open linkedin login page</step>
+<step outcome="successful">When I input email and password <parameter>v_manaf@yahoo.com</parameter> dan <parameter>103214000</parameter></step>
+<step outcome="successful">When I click button sign in</step>
+<step outcome="failed" keyword="FAILED">Then I got to notification as human<failure>net.serenitybdd.core.exceptions.SerenityManagedException: Element should be visible</failure></step>
+<failure>net.serenitybdd.core.exceptions.SerenityManagedException: Element should be visible
+	at net.thucydides.core.steps.ErrorConvertor.convertToAssertion(ErrorConvertor.java:22)
+	at net.thucydides.core.steps.StepInterceptor.reportMethodError(StepInterceptor.java:403)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:22)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:390)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:161)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:72)
+	at Steps.LoginSteps$$EnhancerByCGLIB$$c649809b.ShouldLoginFailNotification(&lt;generated&gt;)
+	at Test.Login.NotificationHuman(Login.java:44)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</failure>
+</scenario>
+</story>

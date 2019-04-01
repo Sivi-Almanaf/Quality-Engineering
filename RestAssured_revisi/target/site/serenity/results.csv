@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login","User supplies correct user name and password","SUCCESS","2019-03-24T13:51:25.507+07:00[Asia/Jakarta]","0.0","11.12"
+"Login","User does NOT supply correct user name and password","SUCCESS","2019-03-24T13:51:36.632+07:00[Asia/Jakarta]","0.0","3.09"
+"Register","User supplies correct data for register","SUCCESS","2019-03-24T13:46:18.68+07:00[Asia/Jakarta]","0.0","83.24"
+"Register","User does NOT supply correct data for register","SUCCESS","2019-03-24T13:47:42.138+07:00[Asia/Jakarta]","0.0","0.01"
+"Regression","User supplies correct data for Post data","PENDING","2019-03-24T13:51:24.939+07:00[Asia/Jakarta]","0.0","0.04"
+"Regression","User supplies correct data for Put data","PENDING","2019-03-24T13:51:24.983+07:00[Asia/Jakarta]","0.0","0.02"
+"Regression","User supplies correct data for Patch data","PENDING","2019-03-24T13:51:25.005+07:00[Asia/Jakarta]","0.0","0.03"

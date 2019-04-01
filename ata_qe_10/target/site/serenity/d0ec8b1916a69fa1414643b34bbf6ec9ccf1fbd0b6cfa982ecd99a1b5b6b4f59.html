@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Stories</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $('.example-table table').DataTable({
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false
+            });
+
+            $('.example-table-in-scenario table').DataTable({
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false
+            });
+
+            $('#evidence-table').DataTable(
+                    {
+                        searching: false,
+                        ordering: false,
+                        paging: false,
+                        info: false
+                    }
+            );
+
+
+            $(".scenario-docs .card-body table").wrap("<div class='table-responsive'></div>");
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Get Users","type":"story","href":"d0ec8b1916a69fa1414643b34bbf6ec9ccf1fbd0b6cfa982ecd99a1b5b6b4f59.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e4 scenarios\u003c/span\u003e"]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+                > <a href="15271d671384858c28f0b18314f86283bd265ca1d7a75cae3f3dff6124fb2935.html">Get</a>
+
+
+                > <span class="truncate-40">Get Users</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-03-2019 15:28</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                    <span>
+                                            <h2><i class="fa fa-book"></i> Story:  Get Users</h2>
+                                        </span>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="requirementNarrativeTitle">
+                                As a user<br />
+I want to get list Users<br />
+So I can see list data on database
+                            </div>
+
+                        </div>
+                    </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#6e829ba8d69fe41d09e67e86ebc7a5b4b710d3d0ac90cc2b004cf9633f06210a">User supplies correct URI and request command list users</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#40177da0668b516f03ce2eacc9064d05560c15cdcdec3b03e8f7f2aebb2c8b36">User supplies correct URI and request command single user</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#beb68a254e877516631767d37ed9ad2bb2356a34c72a4d874ebcf890c4fefcdb">User supplies correct URI and id not found</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#2e58ba626204db01763ef40179e0e200fd8d44f0b3574c1fc187ae257a8eaf4a">User supplies correct URI and request command get delayed response</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="6e829ba8d69fe41d09e67e86ebc7a5b4b710d3d0ac90cc2b004cf9633f06210a">
+                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                User supplies correct URI and request command list users
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='7ca516e2c2796847d148e9d9cd60b0fbb4ef9a35f52c20202345ab68a1d385fc.html' class='badge more-details'>Details</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given that I am ready to get command</p>
+                                                            <p>When I input URI and request command get for list users</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="40177da0668b516f03ce2eacc9064d05560c15cdcdec3b03e8f7f2aebb2c8b36">
+                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                User supplies correct URI and request command single user
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='5fef1757dabb11e8fd654d8b64de6a682b5af3ac7d59a5a4877f15a28727d067.html' class='badge more-details'>Details</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given that I am ready to get command</p>
+                                                            <p>When I input URI and request command for single user</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="beb68a254e877516631767d37ed9ad2bb2356a34c72a4d874ebcf890c4fefcdb">
+                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                User supplies correct URI and id not found
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='2fa8bb88c715d12e98862b67259d92da14a745c79f7e95f4b1c88b64dd16c7c6.html' class='badge more-details'>Details</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given that I am ready to get command</p>
+                                                            <p>When I input URI and request command with invalid id</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="2e58ba626204db01763ef40179e0e200fd8d44f0b3574c1fc187ae257a8eaf4a">
+                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                User supplies correct URI and request command get delayed response
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='7c8e3e2fb4c71e3ed7618f9bb8b4bca91c454cd1e008c159d448bccca0ca4c4c.html' class='badge more-details'>Details</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given that I am ready to get command</p>
+                                                            <p>When I input URI and request command for get list data response</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+
+                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                <div class="ct-chart ct-square"></div>
+                                            </div>
+                                            <script>
+
+                                                var labels = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '100%', ' ', ' ', ' '];
+                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 4}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                // as you saw in the previous example
+                                                var options = {
+                                                    width: 350,
+                                                    height: 300
+                                                };
+
+                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                    new Chartist.Pie('.ct-chart', {
+                                                        series: series,
+                                                        labels: labels,
+                                                    }, {
+                                                        donut: true,
+                                                        donutWidth: 60,
+                                                        donutSolid: true,
+                                                        startAngle: 270,
+                                                        showLabel: true
+                                                    }, options);
+                                                });
+
+                                            </script>
+                                        </div>
+                                        <div class="col-sm-8">
+
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Scenario Results (including rows of test data)</th>
+                                                <th scope="col" colspan="2" class="automated-stats">
+                                                    Automated
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                    <td colspan="3"><a href="636f3ae79a140ad795ec5b5e3e6b57c8e2a5f9b382b45bf8648c2643ad07b4e4.html"><i
+                                                                            class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                    </td>
+                                            </tr>
+
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            <tr>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <a href="2ccd544268c821b64552cf7cf190dba013bf00094045e09772025f5224fe7fc8.html"><i
+                                                                                class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken</a>
+                                                                    </td>
+                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">100%</td>
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr class="summary-stats">
+                                                <td class="aggregate-result-count">Total</td>
+                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Execution Time</th>
+                                                        <th>Clock Time</th>
+                                                        <th>Fastest Test</th>
+                                                        <th>Slowest Test</th>
+                                                        <th>Average Execution Time</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>667ms</td>
+                                                        <td>385ms</td>
+                                                        <td>74ms</td>
+                                                        <td>307ms</td>
+                                                        <td>166ms</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result ERROR">
+                                                    <td>
+                                                            <a href="7ca516e2c2796847d148e9d9cd60b0fbb4ef9a35f52c20202345ab68a1d385fc.html">User supplies correct URI and request command list users</a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>15:28:03</td>
+                                                    <td>00:00</td>
+                                                    <td>
+                                                            <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i> <span
+                                                                style="display:none">ERROR</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result ERROR">
+                                                    <td>
+                                                            <a href="5fef1757dabb11e8fd654d8b64de6a682b5af3ac7d59a5a4877f15a28727d067.html">User supplies correct URI and request command single user</a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>15:28:03</td>
+                                                    <td>00:00</td>
+                                                    <td>
+                                                            <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i> <span
+                                                                style="display:none">ERROR</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result ERROR">
+                                                    <td>
+                                                            <a href="2fa8bb88c715d12e98862b67259d92da14a745c79f7e95f4b1c88b64dd16c7c6.html">User supplies correct URI and id not found</a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>15:28:03</td>
+                                                    <td>00:00</td>
+                                                    <td>
+                                                            <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i> <span
+                                                                style="display:none">ERROR</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result ERROR">
+                                                    <td>
+                                                            <a href="7c8e3e2fb4c71e3ed7618f9bb8b4bca91c454cd1e008c159d448bccca0ca4c4c.html">User supplies correct URI and request command get delayed response</a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>15:28:03</td>
+                                                    <td>00:00</td>
+                                                    <td>
+                                                            <i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i> <span
+                                                                style="display:none">ERROR</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="version">Serenity BDD version 2.0.12</span>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

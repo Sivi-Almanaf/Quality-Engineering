@@ -1,0 +1,41 @@
+<story path="stories/OpenProfile.story" title="">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">perform profile page</asA>
+  <iWantTo keyword="So that">I can see my profile</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Scenario Open Profile Success">
+<givenStories keyword="GivenStories:">
+<givenStory parameters="{}">stories/login.story#{Login:Success}</givenStory>
+</givenStories>
+<story path="stories/login.story" title="">
+<meta>
+<property keyword="@" name="Login" value=""/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">perform login on linkedin</asA>
+  <iWantTo keyword="So that">I can see my news feed</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Scenario login success">
+<meta>
+<property keyword="@" name="Login" value="Success"/>
+</meta>
+<step outcome="successful">Given I open linkedin login page</step>
+<step outcome="successful">When I input email and password <parameter>v_manaf@yahoo.co.id</parameter> dan <parameter>FSAI11890cv4048</parameter></step>
+<step outcome="successful">When I click button sign in</step>
+<step outcome="pending" keyword="PENDING">Then I got to my news feed
+
+Meta: @Login Failed</step>
+<pendingMethod>@Then(&quot;I got to my news feed\n\nMeta: @Login Failed&quot;)
+@Pending
+public void thenIGotToMyNewsFeedMetaLoginFailed() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+</story>
+<step outcome="notPerformed" keyword="NOT PERFORMED">When I click button notification</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I got to my list notification</step>
+</scenario>
+</story>

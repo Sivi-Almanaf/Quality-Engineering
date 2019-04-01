@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>searchcolleague</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="searchcolleague.story" title="">
+<meta>
+<property keyword="@" name="Register" value="Functionality"/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">create account</asA>
+  <iWantTo keyword="So that">I have account in Linkedin</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Input valid firstname and last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input valid firstname and lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid firstname">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input just valid firstname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid lastname">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input just valid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input valid firstname and invalid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input valid firstname and invalid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input Invalid firstname and valid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input Invalid firstname and valid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input Invalid firstname and Invalid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Input Invalid firstname and Invalid lastname</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page list people joined in linkedin</step>
+</scenario>
+<scenario keyword="Scenario:" title="Click Alphabet &apos;A-Z&apos; for linkedin member directory">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Im click one of Alphabet on list Linkedin member directory</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page linkedin for member directory</step>
+</scenario>
+<scenario keyword="Scenario:" title="button &apos;more&apos; functioanlity">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Im click more on Linkedin member directory</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page linkedin for member directory &apos;more&apos;</step>
+</scenario>
+<scenario keyword="Scenario:" title="button &apos;browse members by country/region&apos; functionality">
+<step outcome="successful">Given Im on page https://www.linkedin.com/ for find a colleague</step>
+<step outcome="successful">When Im click browse on Linkedin member directory</step>
+<step outcome="successful">And clik &apos;Search&apos;</step>
+<step outcome="successful">Then Direct to page linkedin for browse member by country/region</step>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

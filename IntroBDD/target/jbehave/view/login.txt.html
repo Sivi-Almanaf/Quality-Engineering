@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>login</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+
+(login.story)
+Meta:
+@Register Functionality
+
+Narrative:
+As a user
+I want to login
+So that I can see my profil on Linkedin
+Scenario: Input All valid data on form sign in
+Given registered account on page https://www.linkedin.com/
+When Input valid email registered, valid password
+And clik 'Sign In'
+Then Direct to Homepage linkedin
+
+Scenario: Input valid email, wrong password
+Given registered account on page https://www.linkedin.com/
+When Input valid email registered, Invalid password
+And clik 'Sign In'
+Then Show Message please enter valid password
+
+Scenario: Input Invalid email
+Given registered account on page https://www.linkedin.com/
+When Input Invalid email registered, and valid password
+And clik 'Sign In'
+Then Show Message please enter valid email
+
+Scenario: Input valid email, empty password
+Given registered account on page https://www.linkedin.com/
+When Input valid email registered, empty password
+And clik 'Sign In'
+Then Show Message please enter password
+
+Scenario: Input just valid password
+Given registered account on page https://www.linkedin.com/
+When empty email/phone number and input valid password
+And clik 'Sign In'
+Then Show Message please enter email/phone number
+
+Scenario: forgot password functionality
+Given registered account on page https://www.linkedin.com/
+When Click button 'forgot password'
+Then Direct to page request password reset
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

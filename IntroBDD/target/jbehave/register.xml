@@ -1,0 +1,63 @@
+<story path="register.story" title="">
+<meta>
+<property keyword="@" name="Register" value="Functionality"/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">create account</asA>
+  <iWantTo keyword="So that">I have account in Linkedin</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Input All valid data in form registration">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Direct to complete profile page</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input invalid first name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration except firstname</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter a valid first name</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input invalid last name">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration except lastname</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter a valid last name</step>
+</scenario>
+<scenario keyword="Scenario:" title="Input invalid email">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration except email</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter a valid email</step>
+</scenario>
+<scenario keyword="Scenario:" title="fill form registration with empty firstname">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration and column firstname empty</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter firstname</step>
+</scenario>
+<scenario keyword="Scenario:" title="fill form registration with empty lastname">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration and column lastname empty</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter lastname</step>
+</scenario>
+<scenario keyword="Scenario:" title="fill form registration with empty email/phone number">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration and column email empty</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter email address</step>
+</scenario>
+<scenario keyword="Scenario:" title="fill form registration with empty password">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When Input all valid data on form registration and column password empty</step>
+<step outcome="successful">And clik &apos;Join Now&apos;</step>
+<step outcome="successful">Then Show message please enter password</step>
+</scenario>
+<scenario keyword="Scenario:" title="Button Sign Up Functionality">
+<step outcome="successful">Given Im on page https://www.linkedin.com/</step>
+<step outcome="successful">When I click button Sign Up</step>
+<step outcome="successful">Then Direct to page registration new account</step>
+</scenario>
+</story>

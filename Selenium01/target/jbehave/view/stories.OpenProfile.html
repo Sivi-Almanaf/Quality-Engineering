@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>stories.OpenProfile</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">stories/OpenProfile.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> perform profile page</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can see my profile</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Scenario Open Profile Success</h2>
+<div class="givenStories">GivenStories:
+<div class="givenStory">stories/login.story#{Login:Success} {}</div>
+</div>
+<div class="story">
+<h1></h1>
+<div class="path">stories/login.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@Login </div>
+</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> perform login on linkedin</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can see my news feed</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Scenario login success</h2>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@Login Success</div>
+</div>
+<div class="step successful">Given I open linkedin login page</div>
+<div class="step successful">When I input email and password <span class="step parameter">v_manaf@yahoo.co.id</span> dan <span class="step parameter">FSAI11890cv4048</span></div>
+<div class="step successful">When I click button sign in</div>
+<div class="step pending">Then I got to my news feed
+
+Meta: @Login Failed <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Then(&quot;I got to my news feed\n\nMeta: @Login Failed&quot;)
+@Pending
+public void thenIGotToMyNewsFeedMetaLoginFailed() {
+  // PENDING
+}
+</pre></div>
+</div>
+</div>
+<div class="step notPerformed">When I click button notification <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then I got to my list notification <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

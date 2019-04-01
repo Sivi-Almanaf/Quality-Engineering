@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Pet Data",
+  "type": "object",
+  "required": [
+    "id",
+    "photoUrls",
+    "tags"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "name": {
+      "type": "string"
+    }
+
+  },
+  "name": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "photoUrls": {
+    "type": "array",
+    "additionalProperties": true,
+    "minItems": 0,
+    "items": {
+      "type": "string"
+    }
+  },
+  "tags": {
+    "type": "array"
+  },
+  "status": {
+    "type": "string"
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="Login" skipped="0" tests="2" time="4.04" timestamp="2019-03-22 06:23:58"><testcase name="User supplies correct user name and password"><error type="java.lang.ExceptionInInitializerError"/><system-err>null
+net.serenitybdd.rest.utils.RestDecorationHelper.decorate(RestDecorationHelper.java:20)
+net.serenitybdd.rest.SerenityRest.given(SerenityRest.java:216)
+test.Login.LoginSteps.loginSuccess(LoginSteps.java:20)
+test.Login.Login.whenIEnterMyUserNameAndPasswordCorrectly(Login.java:21)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+</system-err></testcase><testcase name="User does NOT supply correct user name and password"><error message="Could not initialize class net.serenitybdd.rest.utils.RestSpecificationFactory" type="java.lang.NoClassDefFoundError">Could not initialize class net.serenitybdd.rest.utils.RestSpecificationFactory</error><system-err>Could not initialize class net.serenitybdd.rest.utils.RestSpecificationFactory
+net.serenitybdd.rest.utils.RestDecorationHelper.decorate(RestDecorationHelper.java:20)
+net.serenitybdd.rest.SerenityRest.given(SerenityRest.java:216)
+test.Login.LoginSteps.loginFailed(LoginSteps.java:37)
+test.Login.Login.whenIEnterMyUserNameAndPasswordIncorrectly(Login.java:36)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+</system-err></testcase></testsuite>

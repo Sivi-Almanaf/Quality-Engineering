@@ -1,0 +1,64 @@
+
+(searchcolleague.story)
+Meta:
+@Register Functionality
+
+Narrative:
+As a user
+I want to create account
+So that I have account in Linkedin
+Scenario: Input valid firstname and last name
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Input valid firstname and lastname
+And clik 'Search'
+Then Direct to page list people joined in linkedin
+
+Scenario: Input valid firstname
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Input just valid firstname
+And clik 'Search'
+Then Direct to page list people joined in linkedin
+
+Scenario: Input valid lastname
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Input just valid lastname
+And clik 'Search'
+Then Direct to page list people joined in linkedin
+
+Scenario: Input valid firstname and invalid last name
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Input valid firstname and invalid lastname
+And clik 'Search'
+Then Direct to page list people joined in linkedin
+
+Scenario: Input Invalid firstname and valid last name
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Input Invalid firstname and valid lastname
+And clik 'Search'
+Then Direct to page list people joined in linkedin
+
+Scenario: Input Invalid firstname and Invalid last name
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Input Invalid firstname and Invalid lastname
+And clik 'Search'
+Then Direct to page list people joined in linkedin
+
+Scenario: Click Alphabet 'A-Z' for linkedin member directory
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Im click one of Alphabet on list Linkedin member directory
+And clik 'Search'
+Then Direct to page linkedin for member directory
+
+Scenario: button 'more' functioanlity
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Im click more on Linkedin member directory
+And clik 'Search'
+Then Direct to page linkedin for member directory 'more'
+
+Scenario: button 'browse members by country/region' functionality
+Given Im on page https://www.linkedin.com/ for find a colleague
+When Im click browse on Linkedin member directory
+And clik 'Search'
+Then Direct to page linkedin for browse member by country/region
+
+

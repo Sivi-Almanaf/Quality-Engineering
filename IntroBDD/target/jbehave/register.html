@@ -1,0 +1,75 @@
+<div class="story">
+<h1></h1>
+<div class="path">register.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@Register Functionality</div>
+</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> create account</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I have account in Linkedin</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Input All valid data in form registration</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Direct to complete profile page</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Input invalid first name</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration except firstname</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter a valid first name</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Input invalid last name</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration except lastname</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter a valid last name</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Input invalid email</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration except email</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter a valid email</div>
+</div>
+<div class="scenario">
+<h2>Scenario: fill form registration with empty firstname</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration and column firstname empty</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter firstname</div>
+</div>
+<div class="scenario">
+<h2>Scenario: fill form registration with empty lastname</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration and column lastname empty</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter lastname</div>
+</div>
+<div class="scenario">
+<h2>Scenario: fill form registration with empty email/phone number</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration and column email empty</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter email address</div>
+</div>
+<div class="scenario">
+<h2>Scenario: fill form registration with empty password</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When Input all valid data on form registration and column password empty</div>
+<div class="step successful">And clik 'Join Now'</div>
+<div class="step successful">Then Show message please enter password</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Button Sign Up Functionality</h2>
+<div class="step successful">Given Im on page https://www.linkedin.com/</div>
+<div class="step successful">When I click button Sign Up</div>
+<div class="step successful">Then Direct to page registration new account</div>
+</div>
+</div>

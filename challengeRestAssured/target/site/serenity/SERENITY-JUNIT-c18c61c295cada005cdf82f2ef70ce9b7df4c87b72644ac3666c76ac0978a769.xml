@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="User" skipped="2" tests="3" time="11.88" timestamp="2019-03-26 01:19:39"><testcase name="User will create new user"><error message="com.fasterxml.jackson.core.JsonParseException: no JSON Text to read from input&#10; at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]" type="io.restassured.module.jsv.JsonSchemaValidationException">com.fasterxml.jackson.core.JsonParseException: no JSON Text to read from input
+ at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]</error><system-err>com.fasterxml.jackson.core.JsonParseException: no JSON Text to read from input
+ at [Source: java.io.StringReader@597e63a1; line: 1, column: 1]
+io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:233)
+io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:75)
+io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:76)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+groovy.lang.Closure.call(Closure.java:414)
+groovy.lang.Closure.call(Closure.java:430)
+io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:643)
+io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:94)
+io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:244)
+io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:262)
+test.User.UserSteps.validationJSONPostCreateUser(UserSteps.java:41)
+test.User.User.thenISuccessCreate(User.java:29)
+</system-err></testcase><testcase name="User will Login valid data"><skipped/></testcase><testcase name="Get user by valid user name"><skipped/></testcase></testsuite>

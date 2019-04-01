@@ -1,0 +1,17 @@
+<story path="stories/Login/Login.story" title="">
+<meta>
+<property keyword="@" name="Login" value="Functionality"/>
+</meta>
+<scenario keyword="Scenario:" title="User supplies correct user name and password">
+<step outcome="successful">Given that I am on the sign-in page login</step>
+<step outcome="successful">When I will login with enter valid my email and password correctly</step>
+<step outcome="successful">And click &apos;Sign In&apos;</step>
+<step outcome="successful">Then I am taken to the dashboard after login</step>
+</scenario>
+<scenario keyword="Scenario:" title="User does NOT supply correct user name and password">
+<step outcome="successful">Given that I am on the sign-in page login</step>
+<step outcome="successful">When I will login with enter my email only</step>
+<step outcome="successful">And click &apos;Sign In&apos;</step>
+<step outcome="successful">Then I see an error message &apos;Missing password&apos; after Login</step>
+</scenario>
+</story>

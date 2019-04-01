@@ -1,0 +1,46 @@
+<story path="stories/Login/Login.story" title="">
+<scenario keyword="Scenario:" title="User supplies correct user name and password">
+<step outcome="successful">Given that I am on the sign-in page</step>
+<step outcome="failed" keyword="FAILED">When I enter my email and password correctly<failure>net.serenitybdd.core.exceptions.SerenityManagedException</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And click &apos;Sign In&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I am taken to the dashboard</step>
+<failure>net.serenitybdd.core.exceptions.SerenityManagedException
+	at net.thucydides.core.steps.ErrorConvertor.convertToAssertion(ErrorConvertor.java:22)
+	at net.thucydides.core.steps.StepInterceptor.reportMethodError(StepInterceptor.java:389)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:22)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:376)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:147)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at test.Login.LoginSteps$$EnhancerByCGLIB$$983ec8b9.loginSuccess(&lt;generated&gt;)
+	at test.Login.Login.whenIEnterMyUserNameAndPasswordCorrectly(Login.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="User does NOT supply correct user name and password">
+<step outcome="successful">Given that I am on the sign-in page</step>
+<step outcome="failed" keyword="FAILED">When I enter my email only<failure>net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class net.serenitybdd.rest.utils.RestSpecificationFactory</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And click &apos;Sign In&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I see an error message &apos;Missing password&apos;</step>
+<failure>net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class net.serenitybdd.rest.utils.RestSpecificationFactory
+	at net.thucydides.core.steps.ErrorConvertor.convertToAssertion(ErrorConvertor.java:22)
+	at net.thucydides.core.steps.StepInterceptor.reportMethodError(StepInterceptor.java:389)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:22)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:376)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:147)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at test.Login.LoginSteps$$EnhancerByCGLIB$$983ec8b9.loginFailed(&lt;generated&gt;)
+	at test.Login.Login.whenIEnterMyUserNameAndPasswordIncorrectly(Login.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:782)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:350)
+...</failure>
+</scenario>
+</story>

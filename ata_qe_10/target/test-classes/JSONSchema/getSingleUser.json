@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User Get Single Response",
+  "definiton": {
+    "DataGetSingleUsers":
+    { "type": "object",
+      "required": [ "id", "first_name",
+        "last_name", "avatar"
+      ], "properties":
+    { "id": {"type": "integer"},
+      "first_name": { "type": "string"},
+      "last_name": { "type": "string"},
+      "avatar": { "type": "string" }
+    }
+    }
+  }
+}

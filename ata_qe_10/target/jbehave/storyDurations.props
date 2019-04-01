@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Sun Mar 24 15:28:05 WIB 2019
+stories/Login/Login.story=0
+threads=1
+total=0
+threadAverage=0

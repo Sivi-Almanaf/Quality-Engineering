@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Get users","User supplies correct URI and request command list users","ERROR","2019-03-24T15:28:03.579+07:00[Asia/Jakarta]","0.0","0.19"
+"Get users","User supplies correct URI and request command single user","ERROR","2019-03-24T15:28:03.779+07:00[Asia/Jakarta]","0.0","0.07"
+"Get users","User supplies correct URI and id not found","ERROR","2019-03-24T15:28:03.864+07:00[Asia/Jakarta]","0.0","0.09"
+"Get users","User supplies correct URI and request command get delayed response","ERROR","2019-03-24T15:28:03.964+07:00[Asia/Jakarta]","0.0","0.31"
